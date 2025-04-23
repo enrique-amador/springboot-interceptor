@@ -16,7 +16,8 @@ public class AppConfig implements WebMvcConfigurer{
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(timeInterceptor);
+        registry.addInterceptor(timeInterceptor).addPathPatterns("/app/foo", "/app/bar");
+        // registry.addInterceptor(timeInterceptor).addPathPatterns("/app/**").excludePathPatterns("/app/foo");
     }
 
 }
