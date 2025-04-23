@@ -24,7 +24,7 @@ public class LoadingTimeInterceptor implements HandlerInterceptor{
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
-                logger.info("postHandle()");
+                logger.info("preHandle()");
                 return true;
     }
 
